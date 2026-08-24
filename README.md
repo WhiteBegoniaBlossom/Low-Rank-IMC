@@ -1,6 +1,6 @@
 # Multi-Class Inductive Matrix Completion by Low-Rank Tensor Decomposition
 
-Official implementation of the paper **"Multi-Class Inductive Matrix Completion by Low-Rank Tensor Decomposition"** (Ximing Cai, University of Nottingham Ningbo China).
+Implementation of **multi-class Inductive Matrix Completion (IMC)** via Canonical Polyadic Decomposition (CPD).
 
 This repository extends **Inductive Matrix Completion (IMC)** from regression / binary classification to **multi-class classification** by modeling the three-way interaction among *head entities*, *tail entities*, and *relation categories* as a latent tensor, factorized with **Canonical Polyadic Decomposition (CPD)**. The result is a feature-based (inductive) probabilistic classifier that predicts a full distribution over relation types for any entity pair — including entities never seen during training.
 
@@ -45,8 +45,6 @@ Mean (± std) across 10 random seed splits. IMC outperforms all baselines on all
 | MovieLens 10M | **.4835** ± .0056 | **.3867** ± .0050 | **.5377** ± .0074 | **.6643** ± .0091 |
 | TwoSides | **.3180** ± .0059 | **.2150** ± .0031 | **.3520** ± .0070 | **.5680** ± .0068 |
 
-> Full point-prediction and conformal-prediction tables (all baselines) are in the paper (`Essay/neurips_2026.tex`).
-
 ---
 
 ## Repository structure
@@ -74,20 +72,18 @@ EnhancedIMC/
 ├── new_seeds.py                      # One-click: regenerate splits + update seed lists + copy labels + embeddings
 ├── run_all.py                        # Run all methods across 10 seeds, compute mean ± std
 ├── run_one.py                        # Run all methods on a single version
-├── reshuffle_splits.py               # BFS + shuffle + clean pipeline → multi-seed splits (the canonical splitter)
-│
-└── Essay/                            # LaTeX source of the paper (outside this repo by default)
+└── reshuffle_splits.py               # BFS + shuffle + clean pipeline → multi-seed splits (the canonical splitter)
 ```
 
-The FB15k-237 experiments live in `IMC/`. The MovieLens 10M and TwoSides experiments (which use the BLP/`bert-base-cased` and PubMedBERT pipelines) are implemented in a companion codebase (`OldIMC/`) and reported in the paper for completeness.
+The FB15k-237 experiments live in `IMC/`. The MovieLens 10M and TwoSides experiments (which use the BLP/`bert-base-cased` and PubMedBERT pipelines) are implemented in a companion codebase (`OldIMC/`).
 
-> **External references (not vendored in this repo).** The BFS split methodology follows [GraIL](https://arxiv.org/abs/1911.06962) (Teru et al., ICML 2020) and the prompt-based PLM encoding follows TyleR (De Bellis et al., EMNLP 2025). The pieces actually used at runtime are reimplemented here — `reshuffle_splits.py` (BFS + shuffle + clean), `IMC/tyler/` + `IMC/tyler_fb237.py` (TyleR model), and `generate_plm_embeddings.py` (prompt pipeline) — so the paper's results reproduce without the upstream repos. The only missing piece is the raw FB15k-237 graph, which is needed solely to *regenerate* the BFS splits from scratch (see below).
+> **External references (not vendored in this repo).** The BFS split methodology follows [GraIL](https://arxiv.org/abs/1911.06962) (Teru et al., ICML 2020) and the prompt-based PLM encoding follows TyleR (De Bellis et al., EMNLP 2025). The pieces actually used at runtime are reimplemented here — `reshuffle_splits.py` (BFS + shuffle + clean), `IMC/tyler/` + `IMC/tyler_fb237.py` (TyleR model), and `generate_plm_embeddings.py` (prompt pipeline) — so the results reproduce without the upstream repos. The only missing piece is the raw FB15k-237 graph, which is needed solely to *regenerate* the BFS splits from scratch (see below).
 
 ---
 
 ## Environment & installation
 
-The core IMC solver is written with **CuPy** for GPU-accelerated tensor operations; feature extraction and KGE baselines use **PyTorch**. The reference hardware in the paper is a 0.2× NVIDIA H20 (20 GB VRAM) with 16 GB RAM; peak memory stays under 6 GB VRAM.
+The core IMC solver is written with **CuPy** for GPU-accelerated tensor operations; feature extraction and KGE baselines use **PyTorch**. The reference hardware is a 0.2× NVIDIA H20 (20 GB VRAM) with 16 GB RAM; peak memory stays under 6 GB VRAM.
 
 | Requirement | Purpose |
 |---|---|
@@ -118,7 +114,7 @@ pip install -r requirements.txt
 
 > The exact CuPy / PyTorch builds depend on your CUDA version — see the header of `requirements.txt` for alternatives.
 
-The **TyleR** baseline requires DGL, which conflicts with some base-env libraries on Windows. It is run from a separate `tyler` environment (see `tyler-main/README.md`):
+The **TyleR** baseline requires DGL, which conflicts with some base-env libraries on Windows. It is run from a separate `tyler` environment:
 
 ```bash
 conda create -n tyler python=3.8
@@ -177,7 +173,7 @@ python new_seeds.py --base-seed 7001 --seeds 10
 
 `new_seeds.py` performs the full pipeline in one shot: it generates BFS-based splits via `reshuffle_splits.py`, updates the seed lists in all scripts, copies label/type/ontology files, and generates PLM embeddings for the first seed (then copies them across the remaining seeds).
 
-> **Note on split regeneration.** The precomputed BFS subgraphs are already shipped in `IMC/data/`, so the paper's results reproduce out-of-the-box via `new_seeds.py` / `run_all.py` — no raw graph needed. Re-sampling the subgraph *from the raw full FB15k-237 graph* is outside the scope of this repo; the raw graph is available from the [GraIL repository](https://arxiv.org/abs/1911.06962) if needed.
+> **Note on split regeneration.** The precomputed BFS subgraphs are already shipped in `IMC/data/`, so the results reproduce out-of-the-box via `new_seeds.py` / `run_all.py` — no raw graph needed. Re-sampling the subgraph *from the raw full FB15k-237 graph* is outside the scope of this repo; the raw graph is available from the [GraIL repository](https://arxiv.org/abs/1911.06962) if needed.
 
 ### 2. Generate PLM entity embeddings
 
@@ -189,7 +185,7 @@ python generate_plm_embeddings.py --version fb237_v1_ind --model qwen --aggregat
 python generate_plm_embeddings.py --version fb237_v1_ind --model roberta --aggregation sum
 ```
 
-Six prompt templates (e.g. *"[ENTITY] is a type of [MASK]."*) are fed through the PLM; the masked/final-token hidden states pass through a `PromptEncoder` (LayerNorm → Linear(·→128) → Dropout), are aggregated by the `PoolEncoder` (sum → ReLU → Dropout → Linear → sigmoid), and produce a **128-dimensional** entity embedding. `--aggregation` supports `sum`, `mean`, `concat`, `attn` (`sum` is used throughout the paper).
+Six prompt templates (e.g. *"[ENTITY] is a type of [MASK]."*) are fed through the PLM; the masked/final-token hidden states pass through a `PromptEncoder` (LayerNorm → Linear(·→128) → Dropout), are aggregated by the `PoolEncoder` (sum → ReLU → Dropout → Linear → sigmoid), and produce a **128-dimensional** entity embedding. `--aggregation` supports `sum`, `mean`, `concat`, `attn` (`sum` is used throughout).
 
 ### 3. Cross-seed hyperparameter tuning
 
@@ -244,11 +240,11 @@ For MovieLens 10M: `k = 400, λ = 100, bias = 32, maxiter = 20`. For TwoSides: `
 
 ### Alternating trust-region Newton
 
-The joint non-convex problem is split into three convex subproblems over `W`, `H`, and `C`. Each block is minimized by a **trust-region Newton method** whose quadratic subproblem is solved with **conjugate gradients** (Hessian-vector products are computed exactly and batched). This gives reliable monotonic convergence across all datasets (see the paper's convergence analysis in the appendix).
+The joint non-convex problem is split into three convex subproblems over `W`, `H`, and `C`. Each block is minimized by a **trust-region Newton method** whose quadratic subproblem is solved with **conjugate gradients** (Hessian-vector products are computed exactly and batched). This gives reliable monotonic convergence across all datasets.
 
 ### Bias-augmented features
 
-Optionally, `bias` all-ones columns are appended to the feature matrix (`X → [X, 1_n^{(b)}]`), so the model learns head/tail **main effects** in addition to feature–feature interactions, while remaining entity-agnostic (hence inductive). See `main-fb237.py` and the appendix for the exact logit expansion.
+Optionally, `bias` all-ones columns are appended to the feature matrix (`X → [X, 1_n^{(b)}]`), so the model learns head/tail **main effects** in addition to feature–feature interactions, while remaining entity-agnostic (hence inductive). See `main-fb237.py` for the exact logit expansion.
 
 ### Conformal prediction
 
@@ -274,33 +270,16 @@ Given a trained probabilistic model, split-conformal prediction sets are constru
 
 ---
 
-## Citation
-
-If you use this code or the datasets, please cite the paper:
-
-```bibtex
-@article{cai2026multiclass,
-  title     = {Multi-Class Inductive Matrix Completion by Low-Rank Tensor Decomposition},
-  author    = {Cai, Ximing},
-  school    = {University of Nottingham Ningbo China},
-  year      = {2026}
-}
-```
-
----
-
 ## Acknowledgements
 
 This work builds on and adapts code from:
 
-- **GraIL** — *Inductive Relation Prediction by Subgraph Reasoning* (Teru et al., ICML 2020): BFS subgraph-sampling methodology (`grail-master/`).
-- **TyleR** — *Type-Less yet Type-Aware Inductive Link Prediction* (De Bellis et al., EMNLP 2025): prompt-based PLM encoding pipeline and `PoolEncoder` (`tyler-main/`).
+- **GraIL** — *Inductive Relation Prediction by Subgraph Reasoning* (Teru et al., ICML 2020): BFS subgraph-sampling methodology.
+- **TyleR** — *Type-Less yet Type-Aware Inductive Link Prediction* (De Bellis et al., EMNLP 2025): prompt-based PLM encoding pipeline and `PoolEncoder`.
 - **BLP** — *BERT for Link Prediction* (Daza et al., 2021): feature pipeline for MovieLens/TwoSides.
-
-See the paper's bibliography (`Essay/bibliography/bibliography.bib`) for complete references.
 
 ---
 
 ## License
 
-This repository is released for research and reproducibility purposes. See the paper and the licenses of the adapted third-party code (`grail-master/`, `tyler-main/`) for their respective terms.
+This repository is released for research and reproducibility purposes.
