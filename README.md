@@ -75,11 +75,6 @@ EnhancedIMC/
 ├── run_all.py                        # Run all methods across 10 seeds, compute mean ± std
 ├── run_one.py                        # Run all methods on a single version
 ├── reshuffle_splits.py               # BFS + shuffle + clean pipeline → multi-seed splits (the canonical splitter)
-├── generate_bfs_splits_v2.py         # BFS subgraph sampling (calibrated density)
-├── gen_splits.py / generate_splits.py# BFS split generation (no-DGL reimplementation)
-├── select_splits.py / batch_generate_splits.py / regenerate_splits.py  # Split-selection utilities
-├── gen_convergence_fig.py            # Objective-convergence figure
-├── gen_sensitivity_fig.py            # Hyperparameter-sensitivity figure
 │
 └── Essay/                            # LaTeX source of the paper (outside this repo by default)
 ```
@@ -182,7 +177,7 @@ python new_seeds.py --base-seed 7001 --seeds 10
 
 `new_seeds.py` performs the full pipeline in one shot: it generates BFS-based splits via `reshuffle_splits.py`, updates the seed lists in all scripts, copies label/type/ontology files, and generates PLM embeddings for the first seed (then copies them across the remaining seeds).
 
-> **Note on split regeneration.** `new_seeds.py` and `reshuffle_splits.py` operate on the *precomputed* BFS subgraphs already shipped in `IMC/data/`, so the paper's results reproduce out-of-the-box. The alternative scripts that re-sample the subgraph *from the raw full graph* (`gen_splits.py`, `generate_splits.py`, `generate_bfs_splits_v2.py`, `regenerate_splits.py`, `select_splits.py`, `batch_generate_splits.py`) read the original FB15k-237 graph from the [GraIL repository](https://arxiv.org/abs/1911.06962), which is **not included** in this repo — clone GraIL (or otherwise place the raw FB15k-237 triples) before using them.
+> **Note on split regeneration.** The precomputed BFS subgraphs are already shipped in `IMC/data/`, so the paper's results reproduce out-of-the-box via `new_seeds.py` / `run_all.py` — no raw graph needed. Re-sampling the subgraph *from the raw full FB15k-237 graph* is outside the scope of this repo; the raw graph is available from the [GraIL repository](https://arxiv.org/abs/1911.06962) if needed.
 
 ### 2. Generate PLM entity embeddings
 
