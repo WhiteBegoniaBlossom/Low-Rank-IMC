@@ -59,15 +59,15 @@ EnhancedIMC/
 │   ├── baseline-fb237.py             # Classical baselines: FT, Logistic Regression, Random Forest, LightGBM
 │   ├── kge-baseline-fb237.py         # KGE baselines: DistMult, ComplEx, RotatE (PLM-input)
 │   ├── tyler_fb237.py                # TyleR (RGCN + PLM) baseline driver
-│   ├── tyler/                        # TyleR model (RGCN, layers, aggregators)
+│   ├── tyler_model.py                # TyleR classifier + trainer (RGCN, subgraph dataset, training loop)
+│   ├── tyler_subgraph.py             # TyleR subgraph extraction (BFS + DRNL labeling → DGL)
+│   ├── tyler/                        # TyleR RGCN model (layers, aggregators)
 │   ├── tune-fb237-cross-seed.py      # Cross-seed hyperparameter grid search (selects by avg valid-MRR)
 │   ├── tune-fb237.py                 # Single-seed tuning variant
 │   ├── model_downloader.py           # Download PLMs locally via ModelScope
 │   ├── compute_dataset_statistics.py # Dataset statistics
 │   ├── data/                         # FB15k-237 BFS inductive splits (base + 10 seeds per version)
-│   ├── embeddings/                   # Precomputed 128-dim PLM entity embeddings (.pkl)
-│   ├── results/                      # Unified + summary result CSVs, tuning logs
-│   └── models/                       # Local PLM weights (RoBERTa / Qwen)
+│   └── results/                      # Unified + summary result CSVs, tuning logs
 │
 ├── new_seeds.py                      # One-click: regenerate splits + update seed lists + copy labels + embeddings
 ├── run_all.py                        # Run all methods across 10 seeds, compute mean ± std
@@ -76,6 +76,8 @@ EnhancedIMC/
 ```
 
 The FB15k-237 experiments live in `IMC/`. The MovieLens 10M and TwoSides experiments (which use the BLP/`bert-base-cased` and PubMedBERT pipelines) are implemented in a companion codebase (`OldIMC/`).
+
+> `IMC/embeddings/` (generated PLM embeddings) and `IMC/models/` (downloaded PLM weights) are produced locally by the scripts below and excluded from this repo via `.gitignore`.
 
 > **External references (not vendored in this repo).** The BFS split methodology follows [GraIL](https://arxiv.org/abs/1911.06962) (Teru et al., ICML 2020) and the prompt-based PLM encoding follows TyleR (De Bellis et al., EMNLP 2025). The pieces actually used at runtime are reimplemented here — `reshuffle_splits.py` (BFS + shuffle + clean), `IMC/tyler/` + `IMC/tyler_fb237.py` (TyleR model), and `generate_plm_embeddings.py` (prompt pipeline) — so the results reproduce without the upstream repos. The only missing piece is the raw FB15k-237 graph, which is needed solely to *regenerate* the BFS splits from scratch (see below).
 
