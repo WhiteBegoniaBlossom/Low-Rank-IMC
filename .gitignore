@@ -1,0 +1,71 @@
+# ============================================================================
+#  Python
+# ============================================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+build/
+dist/
+.pytest_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+
+# ============================================================================
+#  Large generated artifacts — regenerate locally, do NOT commit
+# ============================================================================
+# PLM entity embeddings (~4.1 GB of .pkl / .pt). Regenerate with:
+#   python IMC/generate_plm_embeddings.py --version <v> --model <m> --aggregation sum
+IMC/embeddings/
+
+# Downloaded / cached pre-trained model weights (~13 GB: RoBERTa-large, Qwen2.5-3B).
+# Re-download with:  python IMC/model_downloader.py --model <roberta|qwen>
+IMC/models/
+
+# TyleR experiment checkpoints (~462 MB)
+IMC/experiments/
+
+# ============================================================================
+#  Vendored third-party repositories (upstream code + their raw data)
+# ============================================================================
+# These are copies of the upstream GraIL and TyleR repos, used here only as
+# references for the BFS split methodology and the prompt-based PLM pipeline.
+# The parts actually needed at runtime have been reimplemented in this repo:
+#   - BFS split logic   -> reshuffle_splits.py / gen_splits.py / generate_splits.py
+#   - TyleR model       -> IMC/tyler/  + IMC/tyler_fb237.py
+#   - prompt PLM pipeline -> IMC/generate_plm_embeddings.py
+# The precomputed splits are shipped in IMC/data/ (see below).
+grail-master/
+tyler-main/
+
+# ============================================================================
+#  IDE / editor / tooling
+# ============================================================================
+.idea/
+.vscode/
+.claude/
+*.iml
+
+# ============================================================================
+#  OS junk
+# ============================================================================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ============================================================================
+#  Misc
+# ============================================================================
+*.log
+*.tmp
+*.bak
+
+# ----------------------------------------------------------------------------
+#  Note on what IS committed:
+#    - All Python source (top-level scripts + IMC/*.py + IMC/tyler/)
+#    - README.md, requirements.txt
+#    - IMC/data/      (~20 MB, the precomputed BFS inductive splits — required
+#                      to reproduce the 10-seed results without regenerating)
+#    - IMC/results/   (~1.3 MB, the paper's result CSVs)
+# ----------------------------------------------------------------------------

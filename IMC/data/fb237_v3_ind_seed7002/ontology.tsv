@@ -1,0 +1,800 @@
+continent	Wikidata property	continent
+subcontinent	subclass of	geographic region
+city	properties for this type	country
+city	different from	city
+city	different from	big city
+city	said to be the same as	city
+city	has part(s)	neighborhood
+place with town rights and privileges	subclass of	human settlement
+big city	subclass of	city
+big city	different from	city
+port settlement	has part(s)	city
+port settlement		city
+cadastral populated place in the Netherlands	subclass of	territory
+national capital	different from	state capital
+human	properties for this type	occupation
+human	properties for this type	manner of death
+human	properties for this type	cause of death
+human	properties for this type	ethnic group
+human	properties for this type	field of work
+human	different from	people
+sovereign state	subclass of	state
+sovereign state	different from	state
+sovereign state	named after	state
+sovereign state	Wikidata property	country
+country	said to be the same as	state
+country	subclass of	territory
+country	Wikidata property	country
+country	properties for this type	country
+country	properties for this type	continent
+country	properties for this type	currency
+country	permanent duplicated item	country
+country	different from	nationality
+country	different from	state
+country	has part(s)	territory
+seat of government	subclass of	building complex
+metropolis	subclass of	human settlement
+metropolis	named after	city
+metropolis	said to be the same as	million city
+integrated municipality	subclass of	municipality
+Einheitsgemeinde of Germany	subclass of	integrated municipality
+Hanseatic city	subclass of	city
+urban municipality in Germany	subclass of	place with town rights and privileges
+urban municipality in Germany	subclass of	city
+urban municipality in Germany	subclass of	municipality seat
+town divided by border	subclass of	border city
+city-state	subclass of	city
+city-state	subclass of	state
+federated state of Germany	subclass of	federated state
+federal capital	subclass of	national capital
+federal capital	facet of	federated state
+state of Australia	subclass of	federated state
+republic		form of state
+republic		form of government
+landlocked country	subclass of	state
+landlocked country	opposite of	island country
+kingdom	different from	kingdom
+island country	subclass of	state
+island country	opposite of	landlocked country
+archipelago	has part(s) of the class	island
+U.S. state	subclass of	federated state
+U.S. state	subclass of	state
+form of government	subclass of	form of state
+form of government	different from	form of state
+form of state	different from	form of government
+branch of science	said to be the same as	academic discipline
+branch of science	said to be the same as	field of study
+branch of science	subclass of	specialty
+academic discipline	subclass of	specialty
+academic discipline	said to be the same as	branch of science
+academic discipline	said to be the same as	field of study
+academic discipline	said to be the same as	field of work
+exact science		branch of science
+cultural region	subclass of	geographic region
+cultural region		human-geographic territorial entity
+unitary state	opposite of	federation
+unitary state	subclass of	state
+unitary state		form of government
+archipelagic state	subclass of	island country
+web service	different from	online service
+web service	subclass of	service
+series of wars	subclass of	war
+series of wars	has part(s)	war
+core city of Japan	subclass of	city of Japan
+core city of Japan	subclass of	big city
+core city of Japan	next higher rank	city designated by government ordinance
+prefectural capital of Japan	capital of	prefecture of Japan
+city for international conferences and tourism	subclass of	city
+city of Japan	subclass of	city
+city of Japan	subclass of	city
+city of Illinois	subclass of	city in the United States
+global city	subclass of	city
+chemical element	different from	simple substance
+chemical element	said to be the same as	simple substance
+chemical element		group or class of chemical substances
+chemical element	has characteristic	type of chemical entity
+metal	different from	metal
+statistical territorial entity	subclass of	human-geographic territorial entity
+former capital	subclass of	human settlement
+former capital	subclass of	former administrative territorial entity
+megacity	subclass of	million city
+ancient city	subclass of	city
+Free city	subclass of	city
+Free city	subclass of	state
+Free city	subclass of	city-state
+Free city	subclass of	Roman city
+administrative territorial entity	subclass of	human-geographic territorial entity
+administrative territorial entity	subclass of	organization
+administrative territorial entity	different from	statistical territorial entity
+administrative territorial entity	properties for this type	country
+people's republic	subclass of	republic
+literary form	different from	literary genre
+literary genre	different from	literary form
+mountain system	subclass of	geographic region
+branch of philosophy	subclass of	academic discipline
+branch of philosophy		academic discipline
+specialty		field of work
+specialty	has characteristic	matter
+specialty	subclass of	matter
+specialty	model item	academic discipline
+specialty	model item	field of study
+specialty	model item	branch of science
+field of study	location	higher education institution
+field of study	location	university
+field of study	subclass of	specialty
+field of study	said to be the same as	academic discipline
+field of study	said to be the same as	branch of science
+field of study	said to be the same as	academic major
+municipality	subclass of	human settlement
+municipality	different from	city
+municipality	has part(s)	neighborhood
+polis	subclass of	city-state
+polis		city-state
+federated state		federation
+federated state	subclass of	state
+federated state	different from	state
+free state	subclass of	state
+ward	subclass of	organization
+ward		ward
+Christian denomination	subclass of	Christian organization
+Christian denomination	different from	Christian movement
+Christian Church	subclass of	Christian organization
+academic major	Wikidata property	academic major
+academic major	subclass of	academic discipline
+academic major	said to be the same as	field of study
+academic major	has effect	academic degree
+essentially contested concept	subclass of	matter
+field of work	subclass of	specialty
+field of work	Wikidata property	field of work
+field of work	said to be the same as	academic discipline
+field of work	different from	occupation
+field of work		specialty
+economic sector	different from	industry
+economic sector	Wikidata property	industry
+college town	subclass of	city
+college town		university
+college town	used by	university
+financial centre	subclass of	global city
+international organization	subclass of	organization
+lithophile	subclass of	chemical element
+lithophile	different from	lithophile
+city of Switzerland	subclass of	city
+city of Switzerland	subclass of	municipality of Switzerland
+municipality of Switzerland		canton of Switzerland
+hobby	subclass of	occupation
+hobby	opposite of	profession
+secular state		form of government
+secular state	subclass of	state
+federation	opposite of	unitary state
+federation	has part(s)	federal republic
+federation	different from	federation
+federation		form of government
+successor state	subclass of	state
+Commonwealth realm	subclass of	kingdom
+charter city	subclass of	city of California
+county seat	subclass of	human settlement
+special administrative region	subclass of	special administrative region
+dependent territory		territory
+city of Pennsylvania	subclass of	city in the United States
+simple substance		group or class of chemical substances
+simple substance	different from	chemical element
+chalcophile element	subclass of	chemical element
+Christian denominational family	has part(s)	Christian denomination
+Christian denominational family	different from	Christian movement
+fictional human		human
+fictional human	properties for this type	occupation
+animated character		animated film
+anime character	subclass of	animated character
+anime character	subclass of	television character
+anime character	facet of	anime television series
+anime character	facet of	anime film
+Faunus	different from	Faunus
+Faunus	different from	Faunus
+business	said to be the same as	commercial organization
+business	said to be the same as	enterprise
+business	properties for this type	industry
+business	properties for this type	country
+business	subclass of	organization
+business	has part(s)	enterprise
+business	has part(s)	economic activity
+public broadcaster	subclass of	broadcaster
+organization	properties for this type	country
+organization	properties for this type	industry
+organization	properties for this type	field of work
+tourist attraction	said to be the same as	tourist destination
+tourist attraction	properties for this type	country
+religious complex	subclass of	institutional complex
+religious complex	subclass of	building complex
+religious complex	has part(s)	cemetery
+institutional complex	subclass of	building complex
+institutional complex	has part(s)	school building
+institutional complex	has part(s)	cemetery
+urban area	subclass of	geographic region
+urban area	subclass of	human settlement
+urban area	has part(s)	suburb
+tourist destination	subclass of	geographic region
+tourist destination	said to be the same as	tourist attraction
+confessional state	subclass of	state
+confessional state	opposite of	secular state
+confessional state		sacerdotal state
+sacerdotal state	subclass of	state
+political city	subclass of	city
+political city	subclass of	human settlement
+planned national capital	subclass of	national capital
+planned national capital	subclass of	planned community
+city in the United States	subclass of	city
+city in the United States	different from	town in the United States
+planned community	subclass of	human settlement
+consolidated city-county	subclass of	city in the United States
+consolidated city-county	different from	independent city
+event	properties for this type	field of work
+event	properties for this type	country
+constitutional republic	subclass of	republic
+constitutional republic		form of state
+constitutional republic		form of government
+service	different from	service
+service	subclass of	economic activity
+economic activity	different from	industry
+commune of France	subclass of	municipality
+commune of France	different from	municipality
+currency	properties for this type	country
+currency	Wikidata property	currency
+British overseas territories	subclass of	human-geographic territorial entity
+British overseas territories	subclass of	dependent territory
+British overseas territories		dependent territory
+city in the state of New York	subclass of	city in the United States
+musical group	properties for this type	record label
+medical specialty	subclass of	branch of science
+perpetual war	subclass of	war
+proxy war	subclass of	war
+Islamic Republic	subclass of	republic
+state	different from	federated state
+state	different from	nationality
+state	different from	state
+state	Wikidata property	country
+state	properties for this type	currency
+language	properties for this type	country
+language	different from	language
+modern language	said to be the same as	modern language
+social state	subclass of	state
+free imperial city	subclass of	city
+free imperial city	subclass of	state in the Holy Roman Empire
+free imperial city	subclass of	city-state
+continental union	subclass of	regional organization
+natural language	different from	natural language
+natural language		specialty
+natural language		field of study
+prefecture of Japan	subclass of	geographic region
+human settlement	properties for this type	country
+secondary color	follows	primary color
+nation	said to be the same as	people
+nation	different from	nationality
+nation	different from	people
+nation	different from	ethnic group
+ethnic group	different from	people
+ethnic group	different from	nation
+ethnic group	different from	nationality
+ethnic group	Wikidata property	ethnic group
+ethnic group	properties for this type	ethnic group
+ethnic group	said to be the same as	ethnic minority group
+municipality of India	subclass of	human settlement
+association football club	properties for this type	country
+nonprofit organization	opposite of	commercial organization
+nonprofit organization	subclass of	organization
+nonprofit organization		industry
+nonprofit organization	properties for this type	country
+charitable organization	subclass of	nonprofit organization
+territory of Canada	subclass of	territory
+territory of Canada	subclass of	state
+state capital	different from	national capital
+business cluster	subclass of	urban area
+animated film	subclass of	film
+animated film		film genre
+enterprise	subclass of	organization
+enterprise	subclass of	business
+enterprise	said to be the same as	business
+enterprise	properties for this type	industry
+enterprise	properties for this type	country
+public company	subclass of	enterprise
+public company	different from	government agency
+independent city	subclass of	city in the United States
+independent city	different from	consolidated city-county
+type of sport	different from	sports discipline
+standard variety		standard language
+film	properties for this type	media franchise
+film	properties for this type	production company
+film	properties for this type	color
+film	has characteristic	film genre
+sports discipline	subclass of	type of sport
+sports discipline	different from	type of sport
+sports discipline		classification in sports
+Option municipality	subclass of	local government in Germany
+island	properties for this type	country
+terra nullius	subclass of	territory
+profession	different from	occupation
+profession	different from	position
+profession	different from	job title
+profession	subclass of	occupation
+profession	Wikidata property	occupation
+profession	has characteristic	specialty
+occupation	Wikidata property	occupation
+occupation	different from	profession
+occupation	different from	position
+occupation	different from	activity
+occupation	different from	field of work
+occupation group according to ISCO-08	subclass of	occupation
+sub-province-level division	subclass of	city
+prefecture-level city	subclass of	city
+prefecture-level city	subclass of	municipality
+online database	subclass of	online service
+media company	subclass of	business
+online service	different from	web service
+class of disease	different from	disease
+class of disease	is metaclass for	disease
+symptom or sign	different from	clinical sign
+city of Portugal	subclass of	city
+rock band	subclass of	musical group
+rock band		type of musical group
+city in Saudi Arabia	subclass of	city
+direct-administered municipality	subclass of	municipality
+disease		class of disease
+disease	different from	class of disease
+sanctuary city	subclass of	city
+city designated by government ordinance	subclass of	city of Japan
+city designated by government ordinance	subclass of	big city
+city designated by government ordinance	next lower rank	core city of Japan
+LGBT sanctuary city	subclass of	sanctuary city
+music genre	different from	musical form
+city of Ohio	subclass of	city in the United States
+first-class city	subclass of	municipality
+type foundry	subclass of	business
+type foundry	Wikidata property	type foundry
+data controller		role
+software company	subclass of	business
+private university	subclass of	university
+private university	opposite of	public university
+research university	subclass of	university
+Colonial Colleges	subclass of	organization
+private not-for-profit educational institution	subclass of	nonprofit organization
+academic publisher	subclass of	publishing company
+sexual orientation	different from	romantic orientation
+romantic orientation	different from	sexual orientation
+civil parish	subclass of	civil parish
+television station	subclass of	broadcaster
+television network	subclass of	broadcast network
+radio network	subclass of	broadcast network
+radio network	subclass of	business
+film production company	subclass of	production company
+film production company	industry	film industry
+film production company	different from	film studio
+historical region	subclass of	geographic region
+historical region	Wikidata property	historical region
+state capital in Germany	subclass of	state capital
+association football league	subclass of	sports league
+association football league	properties for this type	country
+professional sports league	subclass of	sports league
+professional sports league	subclass of	business
+radio format	different from	radio genre
+type of musical instrument	subclass of	family of musical instruments
+type of musical instrument	different from	family of musical instruments
+family of musical instruments	different from	type of musical instrument
+automobile manufacturer	subclass of	enterprise
+commercial organization	subclass of	organization
+commercial organization	opposite of	nonprofit organization
+commercial organization	said to be the same as	business
+production company	subclass of	media company
+production company	Wikidata property	production company
+state or insular area capital of the United States	subclass of	state capital
+state or insular area capital of the United States	subclass of	city in the United States
+department of France		region of France
+government agency	different from	public company
+government agency	properties for this type	country
+government agency	properties for this type	field of work
+industry		economic sector
+industry	Wikidata property	industry
+industry	different from	economic sector
+political party	properties for this type	country
+voice type	Wikidata property	voice type
+state of Mexico	subclass of	federated state
+sequel film	subclass of	film
+sequel film		film series
+municipality of the Netherlands	subclass of	municipality
+municipality seat	subclass of	human settlement
+municipality seat		municipality
+aerospace manufacturer	subclass of	enterprise
+weapons manufacturing company	subclass of	business
+rail vehicle manufacturer	subclass of	business
+rail vehicle manufacturer		industry
+film genre	is metaclass for	film
+film genre	facet of	film theme
+decimal currency	subclass of	currency
+lake	properties for this type	country
+standard language	subclass of	language
+standard language		literary language
+literary language		standard language
+city of Oregon	subclass of	city in the United States
+canton of Switzerland	subclass of	federated state
+television series	different from	miniseries
+television series	subclass of	television program
+television series	subclass of	series of creative works
+television series		form of television program
+empire		form of government
+empire		form of state
+historical country	subclass of	former administrative territorial entity
+historical country	Wikidata property	country
+federal republic	subclass of	federation
+federal republic	subclass of	republic
+federal republic		form of government
+manner of death	Wikidata property	manner of death
+manner of death	different from	cause of death
+type of crime	subclass of	activity
+anime film	subclass of	animated film
+anime film		film genre
+title of authority	subclass of	job title
+title of authority	subclass of	position
+title of authority	different from	position
+title of authority	said to be the same as	position
+television genre	is metaclass for	television program
+religious occupation	properties for this type	country
+religious occupation	subclass of	occupation
+religious occupation	subclass of	position
+million city	subclass of	city
+corporate title	subclass of	job title
+corporate title	subclass of	profession
+corporate title	said to be the same as	position
+people	said to be the same as	nation
+people	has part(s)	human
+people	different from	ethnic group
+people	different from	human
+people	different from	nation
+public research university	subclass of	public university
+university	subclass of	higher education institution
+university	properties for this type	country
+university	uses	university building
+university campus		university
+university campus		educational institution
+university campus	has part(s)	university building
+university campus	different from	university campus
+new religious movement	subclass of	religious movement
+religion	permanent duplicated item	religion
+religion		activity
+superpower	different from	superpower
+Olympic sport	subclass of	type of sport
+filmmaking occupation	subclass of	profession
+radio genre	different from	radio format
+military campaign	subclass of	military operation
+offensive	subclass of	military operation
+civil war	subclass of	war
+region of Japan	subclass of	geographic region
+nationality	different from	ethnic group
+nationality	different from	state
+nationality	different from	nation
+nationality	subclass of	ethnic group
+chemistry award	subclass of	science award
+Star Trek film	subclass of	film
+food manufacturer	subclass of	business
+cause of death	Wikidata property	cause of death
+cause of death	different from	manner of death
+public university	subclass of	university
+public university	opposite of	private university
+open-access publisher	subclass of	publishing company
+ancient university	subclass of	university
+biological sex	subclass of	role
+royal palace	subclass of	palace
+castle	different from	palace
+historic house museum	different from	historic house museum
+defense contractor	subclass of	organization
+award for best film	facet of	film
+Academy Awards	different from	Academy Awards ceremony
+Academy Awards	subclass of	film award
+specialty channel	subclass of	television network
+municipality of Georgia	subclass of	municipality
+airline	properties for this type	country
+town	different from	big city
+town	different from	city
+town	next higher rank	city
+separated municipality in Ontario	subclass of	single-tier municipality
+record label	subclass of	brand
+record label	Wikidata property	record label
+record label	different from	record company
+record label	facet of	record company
+film distributor	subclass of	media company
+film distributor	subclass of	profession
+film distributor	subclass of	filmmaking occupation
+film distributor	different from	film distributor
+public office	subclass of	position
+job title	different from	profession
+position	subclass of	role
+position	different from	occupation
+position	different from	profession
+position	said to be the same as	corporate title
+position	properties for this type	country
+institute of technology	subclass of	university
+polytechnic	subclass of	institute of technology
+video game publisher	subclass of	board game publishing company
+video game publisher	subclass of	business
+video game publisher	different from	video game developer
+musical form	different from	musical form
+musical form	different from	music genre
+pharmaceutical company	subclass of	business
+military cemetery	subclass of	cemetery
+United States national cemetery	subclass of	military cemetery
+United States national cemetery	subclass of	cemetery
+cemetery	properties for this type	country
+cemetery	different from	cemetery
+Direct Reporting Unit	different from	Direct Reporting Unit
+Christian movement	different from	Christian denomination
+Christian movement	subclass of	religious movement
+list of best books	subclass of	award
+hall of fame	subclass of	award
+record company	subclass of	business
+record company	subclass of	media company
+record label group	facet of	major label
+Colleges That Change Lives	subclass of	liberal arts college
+television production company	subclass of	production company
+television production company	subclass of	film production company
+city in New Jersey	subclass of	city in the United States
+university head	subclass of	corporate title
+university head		position
+university head		public office
+film studio	subclass of	media company
+film studio	different from	film production company
+academic enclave	subclass of	neighborhood
+trademark		brand
+professional degree	subclass of	academic degree
+postgraduate degree	subclass of	academic degree
+postgraduate degree		academic degree
+postgraduate degree	said to be the same as	graduate school
+city of California		county of California
+city of California	subclass of	city in the United States
+thoracic disease		class of disease
+basketball position	subclass of	position
+gay village	subclass of	neighborhood
+multilateral development bank	subclass of	international financial institution
+research institute	properties for this type	field of work
+research institute	different from	graduate school
+publishing company	properties for this type	country
+vocal group		type of musical group
+subscription television		industry
+media franchise	subclass of	series of creative works
+media franchise	Wikidata property	media franchise
+brand	Wikidata property	brand
+miniseries	different from	television series
+miniseries		form of television program
+educational organization	subclass of	organization
+educational organization	said to be the same as	educational institution
+educational organization	different from	educational institution
+video game developer	different from	video game publisher
+video game developer		organization
+board game publishing company	subclass of	publishing company
+board game publishing company	subclass of	organization
+film industry	has part(s)	film distributor
+film industry		industry
+Golden Globe Award ceremony		television program
+Golden Globe Award ceremony		award ceremony
+Golden Globe Award ceremony	subclass of	award ceremony
+form of television program	is metaclass for	television program
+national university	subclass of	university
+national university	subclass of	higher education institution
+national university	subclass of	public university
+comprehensive university	subclass of	university
+Government body of Australia	subclass of	government agency
+baseball team	properties for this type	country
+territory	subclass of	geographic region
+territory	different from	territory
+territory	different from	territory
+human-geographic territorial entity	subclass of	territory
+human-geographic territorial entity		cultural region
+mainland	subclass of	geographic region
+land-grant university	subclass of	university
+animated television series	subclass of	television series
+Star Trek series	subclass of	television series
+school building	different from	school
+university building		university campus
+university building	used by	university
+educational institution	properties for this type	field of work
+academic department	subclass of	educational institution
+academic department		faculty
+collegiate university	subclass of	university
+higher education institution	subclass of	educational institution
+higher education institution	has part(s) of the class	academic department
+higher education institution	has part(s) of the class	faculty
+film remake	subclass of	remake
+film remake	subclass of	film
+news website	said to be the same as	online newspaper
+United States cable news	subclass of	cable channel
+United States cable news	subclass of	news program
+United States cable news	subclass of	media company
+anime television series	subclass of	animated television series
+anime television series	properties for this type	production company
+broadcaster		television network
+broadcaster	subclass of	organization
+broadcaster	subclass of	media company
+census-designated place in the United States	subclass of	unincorporated community in the United States
+census-designated place in the United States	subclass of	statistical territorial entity
+census-designated place in the United States	subclass of	human settlement
+electoral principate		form of state
+state in the Holy Roman Empire	subclass of	federated state
+town in the United States	different from	city in the United States
+Academy Awards ceremony	subclass of	award ceremony
+Academy Awards ceremony	subclass of	television program
+Academy Awards ceremony	facet of	Academy Awards
+Academy Awards ceremony	different from	Academy Awards
+standard time zone in North America	subclass of	time zone
+state university system		educational institution
+Red brick university	subclass of	university
+clinical sign	subclass of	symptom or sign
+film duology	subclass of	film series
+television program	subclass of	series of creative works
+county of Maryland	has part(s)	county seat
+musical profession	subclass of	profession
+invasion	subclass of	offensive
+news program		television genre
+news program		radio genre
+New England town	subclass of	town in the United States
+suburb	subclass of	human settlement
+suburb	subclass of	neighborhood
+sports league	has part(s) of the class	season
+sports league	different from	season
+literary award	subclass of	award
+literary award	subclass of	event
+medallion	subclass of	award
+neighborhood	subclass of	human-geographic territorial entity
+neighborhood		city
+neighborhood		municipality
+neighborhood	properties for this type	country
+supergroup	subclass of	musical group
+supergroup		type of musical group
+supergroup	different from	supergroup
+business school	subclass of	school
+business school	subclass of	higher education institution
+constituent college		collegiate university
+theater of war	subclass of	human-geographic territorial entity
+theater of war		war
+war	participant	state
+musical duo	subclass of	musical group
+musical duo		type of musical group
+town of New Jersey	subclass of	town in the United States
+class of award	subclass of	award
+input device	Wikidata property	input device
+Cannes Film Festival Awards	subclass of	film award
+town of New York	subclass of	town in the United States
+jam band	subclass of	musical group
+jam band		type of musical group
+theatrical occupation	subclass of	profession
+theatrical occupation	subclass of	occupation
+air force academy	subclass of	military academy
+Separate Operating Agency	subclass of	government agency
+Field Operating Agency	subclass of	government agency
+United States Service academies		military academy
+award for best leading actor	opposite of	award for best leading actress
+award for best leading actor	different from	award for best supporting actor
+film award category	subclass of	class of award
+film award category	is metaclass for	film award
+British Academy Film Awards	subclass of	film award
+award for best supporting actor	opposite of	award for best supporting actress
+award for best supporting actor	different from	award for best leading actor
+college of music	subclass of	higher education institution
+college of music	subclass of	music school
+college of music	different from	music school
+drama school	subclass of	educational institution
+drama school		educational institution
+music school	different from	college of music
+American football position	subclass of	position
+television channel	different from	television network
+film theme	facet of	film genre
+color	Wikidata property	color
+color	model item	primary color
+ice hockey position	subclass of	position
+lifetime achievement award	subclass of	class of award
+baseball position	subclass of	position
+college	subclass of	higher education institution
+college	subclass of	educational institution
+college	different from	university
+normal school	subclass of	school
+normal school	subclass of	educational institution
+normal school		educational institution
+boarding school	subclass of	school
+boarding school	subclass of	school building
+public school	subclass of	independent school
+public school	different from	public school
+school	subclass of	educational institution
+school	has part(s)	school building
+school	uses	school building
+school	different from	school building
+Primetime Emmy Award annual ceremony	subclass of	award ceremony
+Primetime Emmy Award annual ceremony	subclass of	television program
+plucked string instrument		family of musical instruments
+technical sciences	subclass of	branch of science
+district or neighborhood of Los Angeles	facet of	neighborhood
+district or neighborhood of Los Angeles		neighborhood
+ethnic minority group	subclass of	ethnic group
+ethnic minority group	said to be the same as	ethnic group
+Wikimedia list article	properties for this type	country
+Golden Raspberry Awards	subclass of	film award
+Screen Actors Guild Award	subclass of	film award
+award for best direction		film award
+activity	different from	occupation
+academic degree	Wikidata property	academic degree
+academic degree	different from	academic degree
+academic degree	subclass of	award
+architectural firm	subclass of	business
+architectural firm		industry
+private for-profit educational institution	subclass of	commercial organization
+college and university ranking	facet of	university
+publication	different from	publishing company
+military academy	subclass of	higher education institution
+military school	subclass of	educational institution
+award for best supporting actress	opposite of	award for best supporting actor
+award for best supporting actress	different from	award for best leading actress
+award for best supporting actress	different from	award for best new actress
+Goya Awards	subclass of	film award
+television film	subclass of	film
+television film	subclass of	television program
+television film		form of television program
+private school	subclass of	school
+primary school	subclass of	school
+liberal arts college in the United States	subclass of	liberal arts college
+MTV Movie & TV Awards	subclass of	film award
+MTV Movie & TV Awards		television program
+European Film Awards	subclass of	film award
+Critics' Choice Movie Award	subclass of	film award
+season	different from	sports league
+season	subclass of	season
+film award	subclass of	award
+film award	field of work	film
+film series	subclass of	series of creative works
+film series	subclass of	media franchise
+film series	has part(s)	sequel film
+film series	has part(s) of the class	film
+time by area	has characteristic	time zone
+time zone	subclass of	geographic region
+film school	subclass of	art academy
+film school		educational institution
+award for best book (by genre)	subclass of	class of award
+Chicago Film Critics Association Awards	subclass of	film award
+Independent Spirit Awards	subclass of	film award
+Christian school	subclass of	Christian organization
+master of ceremonies		profession
+master of ceremonies		occupation
+master of ceremonies		role
+award	has part(s)	class of award
+Pulitzer Prize		science award
+award for best leading actress	opposite of	award for best leading actor
+award for best leading actress	different from	award for best supporting actress
+award for best leading actress	different from	award for best new actress
+National Board of Review Awards	subclass of	film award
+historically black colleges and universities	has part(s) of the class	higher education institution
+historically black colleges and universities	subclass of	higher education institution
+graduate school	different from	research institute
+graduate school	subclass of	higher education institution
+graduate school	subclass of	research institute
+law school	subclass of	faculty
+ethnoreligious group	subclass of	ethnic group
+ethnoreligious group	subclass of	religious identity
+ethnoreligious group	has characteristic	religious identity
+award for best new actress	different from	award for best leading actress
+award for best new actress	different from	award for best supporting actress
+Filmfare Awards	subclass of	film award
+Filmfare Awards		award ceremony
+Satellite Awards	subclass of	film award
+faculty	subclass of	higher education institution
+faculty		university
+faculty	has part(s)	academic department
+community college	subclass of	higher education institution
+class of music award	subclass of	class of award
+theatre award	subclass of	award
+Tony Awards ceremony	subclass of	award ceremony
+legal profession	subclass of	profession
+legal profession		occupation group according to ISCO-08
+novel genre	subclass of	literary genre
+Eastern Orthodox church building	properties for this type	country
+telecommunication company	subclass of	business
+Genie Awards	subclass of	film award
+term of the Canadian federal parliament	subclass of	legislative term
+Hong Kong Film Awards	subclass of	film award
+broadcast network	subclass of	broadcaster
+broadcast network	has part(s) of the class	broadcaster
+high school	properties for this type	country
+National Society of Film Critics Award	subclass of	film award
+special award	subclass of	award

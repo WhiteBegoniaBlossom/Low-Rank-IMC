@@ -1,0 +1,49 @@
+# ============================================================================
+# Multi-Class Inductive Matrix Completion by Low-Rank Tensor Decomposition
+#
+# Environment used in the paper: Python 3.12, CuPy v13.0, PyTorch v2.11.
+#
+# IMPORTANT — install the CUDA-coupled packages FIRST (they must match your
+# NVIDIA driver / CUDA toolkit), then install the rest of this file.
+#
+#   # PyTorch (feature extraction + KGE baselines). Pick the CUDA build for
+#   # your driver, e.g. cu121 / cu124:
+#   pip install torch==2.11 torchvision --index-url https://download.pytorch.org/whl/cu124
+#
+#   # CuPy (GPU-accelerated IMC solver). Choose the package matching your CUDA
+#   # version, e.g. cupy-cuda12x for CUDA 12.x:
+#   pip install cupy-cuda12x==13.0.0
+#
+# Then:  pip install -r requirements.txt
+# ============================================================================
+
+# --- numeric / data handling ---
+numpy
+scipy
+pandas
+scikit-learn
+tqdm
+
+# --- baselines ---
+lightgbm
+
+# --- pre-trained language model feature extraction ---
+transformers
+accelerate          # required by model loading with device_map="cuda"
+safetensors
+
+# --- local PLM download (ModelScope) ---
+modelscope
+
+# --- figures ---
+matplotlib
+
+# --- KGE baselines (PyTorch; see header for CUDA-specific install) ---
+# torch
+# torchvision
+
+# --- IMC GPU solver (CuPy; see header for CUDA-specific install) ---
+# cupy-cuda12x==13.0.0
+
+# --- TyleR baseline (separate 'tyler' conda env: Python 3.8 + DGL) ---
+# dgl==2.4.0

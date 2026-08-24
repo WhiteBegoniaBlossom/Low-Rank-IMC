@@ -1,0 +1,4 @@
+version,seeds,train_entities,train_relations,train_triples,valid_entities,valid_relations,valid_triples,test_entities,test_relations,test_triples,total_triples
+fb237_v1,10,1093 +/- 0,142 +/- 0,1988 +/- 7,286 +/- 4,64 +/- 4,206 +/- 7,286 +/- 7,68 +/- 6,210 +/- 3,2404 +/- 0
+fb237_v2,10,1660 +/- 0,172 +/- 0,4152 +/- 9,560 +/- 9,100 +/- 3,466 +/- 5,564 +/- 13,101 +/- 7,473 +/- 6,5092 +/- 0
+fb237_v3,10,2501 +/- 0,183 +/- 0,7393 +/- 9,986 +/- 14,121 +/- 4,869 +/- 6,990 +/- 13,124 +/- 3,875 +/- 8,9137 +/- 0
